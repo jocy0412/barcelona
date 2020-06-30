@@ -1,0 +1,49 @@
+/*############### container + playerWrap #################*/
+	#container{width:100%; margin-top:125px;}
+		#playerWrap{width:100%;}
+
+	/*############### container + titleWrap #################*/
+	#titleWrap{width:100%; height:70px; line-height:70px; border-bottom:4px solid #9C1737; background-color:#E4E6E7;}
+		.title{width:54%; margin:0 auto;}
+			.title strong{font-size:30px;}
+	
+
+	/*############### container + squadWrap #################*/
+	#squadWrap{width:100%; background-color:#E4E6E7; overflow:hidden;}
+		
+	/*############### squadWrap + imgArea #################*/	
+	#imgArea{width:100%; background-image:url("img/squadSky.png");text-align:center; overflow:hidden;}
+		#imgArea .img{width:100px; height:100px; margin:20px auto;}
+			#imgArea .img img{width:100%;}
+		#imgArea .text{width:300px; height:100px; font-weight:700; margin:0 auto; color:#fff; font-size:30px;}
+			#imgArea .text span{font-weight:400; display:block; font-size:25px;}
+
+
+
+	/*############### squadWrap + playerArea #################*/	
+	#playerArea{width:1280px; margin:0 auto;}
+		.positionBtn{width:825px; margin:70px auto 0; overflow:hidden;}
+			.positionBtn li{width:155px; height:40px; margin-right:12px; line-height:40px; font-size:18px; float:left; text-align:center; border-radius:20px; background-color:#1d3b72; transition:all .3s linear .1s;}
+				
+			.positionBtn .goal{margin-right:0;}
+				.positionBtn li a{color:#fff; display:block; width:100%; height:100%;}
+			.positionBtn li:hover{background-color:#9C1737;}
+				.positionBtn li:hover a{text-decoration:none;}
+			
+			.positionBtn .red{background-color:#9C1737; font-weight:700;}
+		
+		
+		#player{width:1125px; overflow:hidden; margin:0 auto; margin-bottom:30px;}
+				#player li{width:250px; height:360px; margin-top:30px; margin-left:25px; float:left;}
+
+					#player li a {display:block; width:250px; height:360px;}
+						
+						#player li a .img{display:block; float:left; width:250px; height:281px;}
+							#player li a .img img{width:100%; height:100%;}
+						
+						#player li a .number{display:block; float:left; width:70px; height:79px; text-align:center; line-height:79px; font-size:30px; font-weight:700; color:#fff;  background-color:#72142E; transition:background-color 0.5s;}
+						#player li a .playerInfo{display:block; float:left; width:160px; height:59px; padding:10px 0 10px 20px; font-size:20px; background-color:#9C1737; color:#fff; transition:background-color 0.5s;}
+							#player li a span.position{font-size:14px;}
+							
+				#player li:hover a span.number{background-color:#1b3058;}
+				#player li:hover a span.playerInfo{background-color:#1d3b72;}

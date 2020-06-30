@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title> NEWS </title>  
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="js/subGnb.js"></script>
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <link rel="stylesheet" href="css/header.css" type="text/css">
+  <link rel="stylesheet" href="css/footer.css" type="text/css">
+  <link rel="shortcut icon" href="img/logo.png"/>
+  <link rel="apple-touch-icon" href="img/logo.png"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+  <style>
+	
+	/*############### 폰트 영역################*/
+	@font-face{font-family:"exo"; src:url("font/Exo2-Regular.woff");}
+	@font-face{font-family:"saria"; src:url("font/Saira-Regular.woff");}
+	@font-face{font-family:"pontano"; src:url("font/PontanoSans-Regular.woff");}
+	
+	
+
+		/*############### container #################*/
+		#container{width:100%; margin-top:125px;}
+
+		/*############### newsWrap + newsHeaderWrap #################*/
+		#newsWrap{width:100%;}
+		#newsHeaderWrap{width:100%; border-bottom:3px solid #9C1737;}
+
+			/*############### newsHeader #################*/
+			#newsHeader{width:1000px; margin:0 auto;}
+				#newsHeader .hashTag{font-size:18px; padding-top:20px;}
+				#newsHeader h3{font-size:35px; font-family:"saria"; padding:20px 0 15px;}
+				#newsHeader .publish{background-color:#E3E5E6; overflow:hidden;}
+					#newsHeader .publish .date{width:865px; height:40px; line-height:40px; font-size:18px; float:left;}
+					#newsHeader .publish .shareArea{width:135px; float:right;}
+						.shareArea ul{width:135px; overflow:hidden;}
+							.shareArea ul li{width:40px; height:40px; float:left; margin-left:5px;}
+								.shareArea ul li a{display:block; width:100%; height:100%;}
+									.shareArea ul li a img{width:100%; height:100%;}
+				#newsHeader .descText{color:#4C5159; font-size:22px; padding:20px 0;}
+
+		
+		/*############### newsAreaWrap #################*/				
+		#newsAreaWrap{width:100%; overflow:hidden;}
+			#newsArea{width:1000px; margin:50px auto 0;}
+				#newsArea .imgArea{width:100%; height:562px; position:relative;}
+					#newsArea .imgArea img{width:100%; height:100%;}
+				#newsArea .imgArea .bottomTitle{width:100%; height:40px; line-height:40px; text-indent:10px; display:block; position:absolute; left:0; bottom:0; background-color:rgba(0,0,0,0.5); color:#fff; font-family:"saria"}
+			
+			#textSideWrap{width:100%; overflow:hidden;}
+				#textSideWrap .textArea{width:660px; padding:20px; float:left; font-size:20px; line-height:30px;}
+					#textSideWrap h4{font-size:30px; padding:30px 0 10px;}
+					#textSideWrap .highLight{background-color:#ccc; padding:10px; margin:20px 0;}
+
+				#sideArea{width:300px; float:right; padding-top:20px;}
+					#sideArea .latest{width:298px; border:1px solid #ccc;}
+						#sideArea .latest h3{border-top:3px solid #9C1737; padding:20px 0 15px; text-indent:10px;}
+						#sideArea .latest ul{width:100%;}
+							#sideArea .latest li{width:100%; height:100px; border-top:1px solid #ccc;}
+								#sideArea .latest li a{display:block; width:100%; height:100%; overflow:hidden; color:#325082; font-weight:700;}
+									#sideArea .latest a .newsImg{display:block; width:108px; height:60px; float:left; padding:20px 0 20px 10px;}
+										#sideArea .latest a .newsImg img{width:100%; height:100%;}
+										
+									#sideArea .latest a .newsTitle{display:block; width:170px; height:60px; float:left; padding:20px 5px;}
+						
+						#sideArea .newsMain{text-align:center; outline:1px solid #ccc; padding:10px 0; background-color:#D2D5D6;}
+							#sideArea .newsMain a{display:block; width:100%; color:#325082; font-weight:700;}
+
+					#sideArea .newsAd{width:100%; padding-top:10px;}
+						#sideArea .newsAd p{padding:10px 0;}
+					
+
+
+  </style>
+ </head>
+ <body>
+	<div id="wrap">
+<?php include "00_headerWrap.php"; ?>
+		<div id="container">
+			<section id="newsWrap">
+				<h2>뉴스 영역</h2>
+				<div id="newsHeaderWrap">
+					<h2>뉴스 헤더 영역</h2>
+					<div id="newsHeader">
+						<p class="hashTag">#ESPANYOLBARÇA</p>
+						<h3 class="headLine">Valencia 0-2 FC Barcelona (0-3 on aggregate): Cup finalists once again!</h3>
+						<div class="publish">
+							<p class="date"><strong>WWW.FCBARCELONA.COM</strong> - 08/02/2018 | 23:33</p>
+							<div class="shareArea">
+								<ul>
+									<li><a href="#none" title="트위터 공유"><img src="img/twitter.png" alt="트위터 이미지"/></a></li>
+									<li>
+										<a href="#none" title="페이스북 공유"><img src="img/facebook.png" alt="페이스북 이미지"/></a>
+									</li>
+									<li>
+										<a href="#none" title="구글+ 공유"><img src="img/googleplus.png" alt="구글 플러스 이미지"/></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<p class="descText">
+							Coutinho claims first goal in a blaugrana jersey and Rakitic adds a second to send the Catalans into the Copa del Rey final against Sevilla on April 21
+						</p>
+					</div>
+				</div>
+				<div id="newsAreaWrap">
+					<div id="newsArea">
+						<p class="imgArea">
+							<img src="img/new7.jpg" alt="news7 이미지"/>
+							<span class="bottomTitle">
+								Valencia 0-2 FC Barcelona (0-3 on aggregate): Cup finalists once again!	
+							</span>
+						</p>
+						<div id="textSideWrap">
+							<div class="textArea">
+								Does this team ever stop breaking records? It would seem not and February 8 produced yet another memorable night for the all-conquering blaugrana.<br/><br/>
+
+								<strong>FC Barcelona</strong> have become the first team to ever reach five Spanish Cup finals in a row, where they’ll have the chance to make it four titles in a row when they meet <strong>Sevilla</strong> on April 21 at a venue to be decided.<br/><br/>
+
+								The odds were already stacked in their favour after winning the first leg 1-0. And although Valencia put up a fine fight in the first half, <strong>Philippe Coutinho</strong>’s goal just after the break pretty much settled things before <strong>Ivan Rakitic</strong> brushed away any remaining shadows of doubt with an 82nd minute clincher.<br/><br/>
+								
+								<h4>Lively encounter</h4>
+								From the word go, this game had a very different dynamic to the first leg. At the Camp Nou there was always the knowledge that things wouldn’t really be decided until seven days later. Tonight there were not going to be any second chances.<br/><br/>
+
+								Both goalkeepers had plenty to do in the first 45 minutes, with Jaume Domènech’s dive to deny Leo Messi the most spectacular intervention.<br/><br/>
+
+								Barça’s Argentinian superstar was creating danger every time the ball came near his feet. But it was Valencia who came closest to a first half goal when when Rodrigo sent a header clattering onto the bar.<br/><br/>
+								
+								<h4>The boy from Brazil</h4>
+								Coutinho replaced Andre Gomes after the break, and after just five minutes on the field, the Brazilian was celebrating his first goal for his new club. Luis Suárez made it, with a terrific run down the left, leaving Ezequiel Garay in his wake as he set up Coutinho with a splendid assist.<br/><br/>
+
+								The away goal meant Barça already had a foot and a half in the final. Valencia has less than 40 minutes in which to score three.<br/><br/>
+
+								It looked like they’d got at least one when José Luis Gayà fired from point-blank range, but Jasper Cillessen pulled off a staggering save.<br/><br/>
+								
+								<h4>Mina debut</h4>
+								The sell-out crowd at Mestalla was praying for a miracle by this stage, and with ten minutes to go Rakitic put them out their misery by firing home the goal that clinched it – with Suárez once again doing the hard work in the build-up.<br/><br/>
+
+								That really was game over, and the ideal time for Ernesto Valverde to send out new Colombian signing Yerry Mina for his first playing experience at his new club.<br/><br/>
+
+								By this stage, large numbers of home supporters were already leaving the ground. Valencia's cup journey was over.<br/><br/>
+
+								Barça had already sealed qualification, and nobody could argue that that wasn't precisely what they deserved.<br/><br/>
+
+								So bring on the final! Bring on Sevilla! And Força Barça!
+							</div>
+							<aside id="sideArea">
+								<div class="latest">
+									<h3>LATEST NEWS</h3>
+									<ul>
+										<li>
+											<a href="#none" title="최근뉴스0">
+												<span class="newsImg">
+													<img src="img/barTv.jpg" alt="barTv 이미지"/>
+												</span>
+												<span class="newsTitle">
+													FC Barcelona v Espanyol: Derby delight (2-0)
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#none" title="최근뉴스1">
+												<span class="newsImg">
+													<img src="img/new4.jpg" alt="new4 이미지"/>
+												</span>
+												<span class="newsTitle">
+													Luis Suárez hits jackpot with pinball goal
+												</span>
+											</a>
+										</li>
+										<li>
+											<a href="#none" title="최근뉴스2">
+												<span class="newsImg">
+													<img src="img/new5.jpg" alt="new5 이미지"/>
+												</span>
+												<span class="newsTitle">
+													Do you believe in BARÇA's magic?
+												</span>
+											</a>
+										</li>
+									</ul>
+									<p class="newsMain">
+										<a href="news.php" title="뉴스 전체 영역">View all articles</a>
+									</p>
+								</div>
+								<div class="newsAd">
+									<p>
+										<a href="#none" title="shopAd"><img src="img/news_ad0.jpg" alt="뉴스 광고0"/></a>
+									</p>
+									<p>
+										<a href="#none" title="sponserAd"><img src="img/news_ad1.jpg" alt="뉴스 광고1"/></a>
+									</p>
+								</div>
+							</aside>
+						<div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer id="footer">
+			<div id="sponsers">
+				<h2>스폰서 영역</h2>
+				<div class="floor0">
+					<p class="img">
+						<a href="https://www.fcbarcelona.com/" title="바로셀로나 사이트"><img src="img/logo.png" alt="바로셀로나 로고"/></a>
+					</p>
+					<p class="teamName">FC BARCELONA WITH</p>
+				</div>
+				<div class="floor1">
+					<ul>
+						<li><a href="#none" title="스폰서0"><img src="img/spon0_on.png" alt="스폰서0 로고"/></a></li>
+						<li><a href="#none" title="스폰서1"><img src="img/spon1_on.png" alt="스폰서1 로고"/></a></li>
+						<li><a href="#none" title="스폰서8"><img src="img/spon8_on.png" alt="스폰서8 로고"/></a></li>
+					</ul>
+				</div>
+				<div class="floor2">
+					<ul>
+						<li><a href="#none" title="스폰서2"><img src="img/spon2_on.png" alt="스폰서2 로고"/></a></li>
+						<li><a href="#none" title="스폰서3"><img src="img/spon3_on.png" alt="스폰서3 로고"/></a></li>
+						<li><a href="#none" title="스폰서4"><img src="img/spon4_on.png" alt="스폰서4 로고"/></a></li>
+						<li><a href="#none" title="스폰서5"><img src="img/spon5_on.png" alt="스폰서5 로고"/></a></li>
+						<li><a href="#none" title="스폰서6"><img src="img/spon6_on.png" alt="스폰서6 로고"/></a></li>
+						<li><a href="#none" title="스폰서7"><img src="img/spon7_on.png" alt="스폰서7 로고"/></a></li>
+					</ul>
+				</div>
+				<div class="floor3">
+					<p>
+						<strong>View complete list of sponsors</strong>
+					</p>
+				</div>
+			</div>
+			<div id="leftRightWrap">
+				<div id="footerArea">				
+					<div class="left">
+						<p class="img">
+							<a href="#none" title="바로셀로나 사이트"><img src="img/fcbLogo_300.png" alt="푸터 로고"/></a>
+						</p>
+						<span class="copy">&copy; Copyright FC Barcelona | Pàgina Oficial del FC Barcelona</span>
+						<ul>
+							<li><a href="#none" title="Legal tems 주소">Legal tems</a> |</li>
+							<li><a href="#none" title="Accessibility 주소">Accessibility</a> |</li>
+							<li><a href="#none" title="Contact 주소">Contact</a> |</li>
+							<li><a href="#none" title="FC Barcelona 주소">FC Barcelona</a> |</li>
+							<li><a href="#none" title="Historical archive 주소">Historical archive</a></li>	   
+						</ul>
+					</div>
+					<div class="right">
+						<p class="img"><a href="#none" title="스폰서 사이트"><img src="img/footerAd.png" alt="푸터 광고"/></a></p>
+						<p class="text">Agreement between FC Barcelona and UNICEF</p>		
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,39 @@
+/*############# footer ###############*/
+#footer{width:100%;}
+	#sponsers{width:100%; background-color:#131519;}
+		.floor0{width:100%; padding-top:40px; height:130px;}
+			.floor0 .img{width:90px; height:90px; margin:0 auto;}
+				.floor0 .img img{width:100%; height:100%;}
+				.floor0 .teamName{color:#9C1737;padding-top:10px; text-align:center; font-size:18px; font-family:"saria";}
+		
+		.floor1{width:100%; overflow:hidden;}
+			.floor1 ul{width:540px; height:54px; padding:10px 0; margin:20px auto 0;}
+				.floor1 ul li{width:130px; height:54px; float:left; margin:0 20px;}
+					.floor1 a{display:block; width:100%; height:100%;}
+						.floor1 a img{width:100%; height:100%;}
+		
+		.floor2{width:100%; overflow:hidden;}
+			.floor2 ul{max-width:1080px; width:100%; height:54px; padding:30px 0 10px; margin:0 auto;}
+				.floor2 ul li{width:130px; height:54px; float:left; margin:0 20px;}
+					.floor2 a{display:block; width:100%; height:100%;}
+						.floor2 a img{width:100%; height:100%;}
+		
+		.floor3{width:100%; padding-top:40px; height:50px;}
+			.floor3 p{width:100%; height:130px; text-align:center;}
+				.floor3 p strong{font-size:18px; color:#fff;}
+	
+	#leftRightWrap{width:100%; background-color:#0F245F;}
+		#footerArea{width:100%; max-width:1280px; background-color:#0F245F; height:120px; padding:30px 0; margin:0 auto;}
+			#footerArea div{float:left;}
+			#footerArea .left{width:50%; height:120px;}
+				#footerArea .left .img{margin-left:10px; width:165px; height:40px;}
+					#footerArea .left .img img{width:100%; height:100%;}
+				#footerArea .left span{padding-left:10px; color:#9C1737; font-size:13px; font-weight:700;}
+				#footerArea .left ul{width:1200px;}
+					#footerArea .left ul li{display:inline; color:#777;}
+						#footerArea .left ul li a{padding:10px; color:#fff; font-size:14px;}
+			
+			#footerArea .right{width:50%; color:#fff; font-size:14px; height:120px; text-align:right; position:relative;}
+				#footerArea .right .img{width:190px; height:40px; position:absolute; right:0; top:0;}
+					#footerArea .right .img img{width:100%; height:100%;}
+				#footerArea .right .text{padding-top:62px;}

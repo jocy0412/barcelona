@@ -1,0 +1,68 @@
+#wrap{width:100%; max-width:1920px; margin:0 auto; font-family:"pontano";}
+
+	/*############# headerWrap ###############*/
+	#headerWrap{width:100%; height:125px; position:fixed; top:0; z-index:7; background-color:rgba(15,42,86,1);}
+	
+
+	/*############# headerWrap + info ###############*/
+	#infoTop{width:100%; background-color:#000;}
+		#info{max-width:1280px; width:100%; margin:0 auto; height:40px; overflow:hidden;}
+			
+		
+	/*############## headerWrap + info + matchInfo  ###############*/
+	#matchInfoWrap{width:50%; float:left;}
+		#matchInfo{width:50%; height:40px; color:#fff; font-size:12px; font-family:Helvetica;}
+			#matchInfo li{width:710px;}
+				#matchInfo p{width:710px; height:30px; padding:5px 0; line-height:30px;}
+					#matchInfo p span{display:block; float:left; height:30px; border-right:1px solid #444; text-align:center;}
+						#matchInfo p span.league{width:100px; padding-right:10px;}
+						#matchInfo p span.date{width:70px;}
+						#matchInfo p span.time{width:50px;}
+						#matchInfo p span.img{width:30px; height:30px; border:none; padding-left:10px;}
+							#matchInfo p span.img img{width:100%; height:100%;}
+			
+	/*############## headerWrap + info + sponInfo  ###############*/
+	#sponInfoWrap{width:50%; float:left; position:relative; background-color:blue;}
+		#sponInfo{width:330px; height:30px; position:absolute; right:5px; overflow:hidden; padding:5px 0;}
+			#sponInfo li{float:left; width:70px; height:30px; font-size:14px; line-height:30px; text-align:center;}
+				#sponInfo .spon1{width:170px; text-align:right;}
+				#sponInfo .spon2{padding:0 10px;}
+				#sponInfo .spon3{}
+				#sponInfo li a{color:#fff;}
+					#sponInfo li a:hover{color:#EE3337;}
+					#sponInfo li img{width:100%; height:100%;}
+
+	/*############# header ###############*/	
+	#header{width:100%; height:85px;}
+	
+		/*############# gnbWrap ###############*/
+		#gnbWrap{max-width:1280px; width:100%; margin:0 auto;}
+	
+		/*로고높이 300 * 82 */
+		#logo{width:50%; float:left;}
+			#logo .img{width:300px; height:82px;}
+				#logo .img img{width:100%; height:100%;}
+	
+		/*############# header + gnb ###############*/
+		#gnb{width:50%; height:85px; font-family:"exo"; float:left; text-align:right;}
+			#gnb li{display:inline; line-height:85px; padding-left:40px; font-size:18px;}
+				#gnb li a{color:#fff; padding:0 5px;}
+				#gnb li a:hover{color:#EE3337;}
+
+			#gnb:after{content:""; display:block; clear:both;}
+
+		#gnbWrap:after{content:""; display:block; clear:both;}
+
+		/*############# header + gnb ###############*/
+		#subGnb{width:1225px; background-color:#fff; position:absolute; left:18%; font-family:"saria";}
+			#subGnb .sub{width:100%; overflow:hidden; outline:1px solid #ccc;}
+				#subGnb .subArea{width:300px; float:left;}
+					#subGnb .subArea ul{width:100%;}
+						#subGnb .subArea li{width:100%; height:50px; line-height:50px; text-indent:30px; border-bottom:1px solid #ccc; border-right:1px solid #ccc;}
+						#subGnb .subArea li:last-child{border-bottom:none;}
+							#subGnb .subArea li a{color:#333; display:block; width:100%; height:100%;}
+							
+
+				#subGnb .adArea{width:725px; float:left; overflow:hidden;}
+					#subGnb .adArea p{width:300px; height:200px; background-color:pink; margin:10px; float:left; cursor:pointer;}
+						#subGnb .adArea p img{width:100%; height:100%;}

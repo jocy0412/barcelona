@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <title> Sign Up </title>
+  <link rel="shortcut icon" href="img/logo.png"/>
+  <link rel="apple-touch-icon" href="img/logo.png"/>
+  <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+  <script>
+	function postcode(){
+		new daum.Postcode({
+            oncomplete: function(data) {
+                document.getElementById("post1").value = data.zonecode;				
+				document.getElementById("add1").value = data.address;
+				document.getElementById("add2").focus();
+            }
+        }).open();
+	}
+  </script>
+  <style>
+	*{margin:0; padding:0;}
+	li{list-style-type:none;}
+	a:link, a:visited{text-decoration:none;}
+	a:hover, a:focus{text-decoration:underline;}
+
+	h2{width:1px; height:1px; line-height:0; font-size:1px; overflow:hidden; position:absolute; left:-9999px;}
+	@font-face{font-family:"exo"; src:url("font/Exo2-Regular.woff");}
+	@font-face{font-family:"saria"; src:url("font/Saira-Regular.woff");}
+	@font-face{font-family:"pontano"; src:url("font/PontanoSans-Regular.woff");}
+
+	#wrap{width:1920px; margin:0 auto;}
+		/*################# header ####################*/
+		#header{width:1920px; height:140px; position:absolute;}
+			h1{width:300px; height:82px; position:absolute; left:810px; top:80px; margin:0 auto; z-index:1; font-family:"saria";}
+				h1 a{display:block; width:100%; height:100%; overflow:hidden;}
+				h1 a .logo{display:block; float:left; width:82px; height:82px;}
+					h1 a .logo img{width:100%; height:100%;}
+				h1 a .logoText{display:block; float:left; width:198px; padding:10px 0 0 20px; height:72px; font-size:25px; color:#fff; letter-spacing:2px; line-height:30px;}
+					h1 a .logoText .normal{font-weight:400; color:#eee;}
+					h1 a .logoText .gray{font-weight:400; color:#ccc;}
+
+		
+		/*################# container + signWrap ####################*/
+		#container{width:1920px;}
+			#signWrap{width:1920px; height:1200px; position:relative; background-image:url("img/ticket_back.png"); overflow:hidden; background-repeat:no-repeat; background-color:#000;}
+
+			#signWrap form{padding:20px 0 20px; width:600px; height:800px; margin:220px auto 0; background-color:rgba(255,255,255,1); border-radius:15px; overflow:hidden;}
+				#signWrap fieldset{border:none; width:500px; margin:0 auto;}
+				#signWrap legend{display:none;}
+
+		/*################## signArea #################*/
+		#signArea{width:100%;}
+			#signArea li{width:100%; height:50px; margin:5px 0;}
+				#signArea li label{display:inline-block; width:130px; height:35px; font-size:14px; line-height:35px; }
+				#signArea li input{display:inline-block; vertical-align:top; width:190px; height:33px; font-size:14px; text-indent:10px; border:1px solid #d9d9d9; background-color:#f6f6f6;}
+
+				#IDchkDesc{font-size:12px; display:inline; width:50px; line-height:35px; text-align:right; vertical-align:top;}
+				#signArea #IDchkBtn{width:50px; height:35px; font-size:12px; text-align:center; text-indent:0; cursor:pointer;}
+
+				#signArea #postArea{width:100%;}
+				#signArea #postArea input{width:50px; border:1px solid #ccc;}
+				#signArea #postArea #post1{width:110px; text-indent:5px; display:inline-block;}
+				#signArea #postArea #postBtn{text-indent:0; width:100px; margin-left:5px;}
+					
+					#signArea #add1, #signArea #add2{width:250px; border:1px solid #ccc; margin-bottom:10px;}
+					#signArea #add2{margin-left:135px; width:250px;}
+
+					#signArea input[type="checkbox"]{width:20px; height:20px;}
+					#signArea .checkboxs{width:100%; height:40px; margin:10px 0;}
+					#signArea .checkboxs label{width:450px; height:20px; font-size:15px; line-height:20px;}
+
+					#signArea #btnCenter{width:210px; margin:20px auto 0;}
+						#signArea input[type="submit"]{width:100px; height:40px; text-indent:0;}
+						#signArea input[type="reset"]{width:100px; height:40px; text-indent:0;}
+
+
+		
+		/*################# footer ####################*/
+		#footer{width:100%; background-color:#131519; position:relative;}
+			#copy{position:absolute; top:-50px; left:732px; color:#aaa; width:455px; height:21px; line-height:21px; font-family:"pontano";}
+				#copy .copy{font-weight:700;}
+				#copy a{color:#fff;}
+					#copy a:hover{color:#AE0917;}
+
+			#sponser{width:1170px; height:45px; margin:0 auto; padding:20px 0 20px 20px; background-color:#131519;}
+				#sponser ul{width:100%; height:100%; overflow:hidden;}
+					#sponser ul li{width:110px; padding-right:20px; height:100%; float:left;}
+						#sponser ul li a{display:block; width:100%; height:100%;} 
+						#sponser ul li img{width:100%; height:100%;}
+
+	
+  </style>
+  <script>
+	function IDchkBtns(){
+		// 1) userid 공간을 id객체로 만들기
+		// 2) ※ 아이디 중복체크 글씨를 아이디 필수입력이라는 글씨로 바꾸기
+		//	id객체로 만들기
+
+		var userid =document.getElementById("userid");
+		var IDchkDesc =document.getElementById("IDchkDesc");
+		/*
+			응용문제
+				userid 공간이 비어있다면 아이디가 비어있습니다. 알림창 띄우기
+				userid 공간으로 focus 이동하기
+					※ 아이디 중복체크 글씨를 아이디 필수입력이라는 글씨로 바꾸기
+		*/
+
+		if(userid.value == ""){
+			alert("아이디가 비어있습니다.");
+			userid.focus();
+			IDchkDesc.innerHTML="<strong style='color:red;'> 아이디 필수입력</strong>";
+		}
+		/*
+		else if(userid.value.length <= 4){
+			alert("아이디 4자 이상 입력.");
+			userid.focus();
+			IDchkDesc.innerHTML="<strong style='color:red;'> 아이디 4자 이상 입력</strong>";
+		}
+		*/		
+		else{
+			// 아이디 입력받는 부분에 대한 값 작성하기
+			// 중복체크나 가입을 확인하는 부분의 영역이 form으로 작성되어 있음
+			
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET","idDoubleChk.php?q="+userid.value,true);
+
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+					IDchkDesc.innerHTML = xmlhttp.responseText;
+				}
+
+			};
+
+			xmlhttp.send();
+		}	
+	}
+  </script>
+ </head>
+ <body>
+	<div id="wrap">
+		<header id="header">
+			<h1>
+				<a href="index.php" title="바로셀로나 사이트">
+					<span class="logo">
+						<img src="img/fcbLogo_login.png" alt="바로셀로나 로고 이미지"/>
+					</span>
+					<span class="logoText">
+						FCB<span class="normal">ARCELONA</span> <span class="gray">Sign Up</span>
+					</span>
+				</a>
+			</h1>
+		</header>
+		<div id="container">			
+			<section id="signWrap">
+				<h2>회원가입 양식 영역</h2>
+				<form action="signUp_control.php" method="post">
+					<fieldset>
+						<legend>회원가입</legend>
+						<ul id="signArea">
+							<li>
+								<label for="userid"> ID </label>
+								<input id="userid" type="text" name="userid" maxlength="10" placeholder="Maximum 10 characters" required/>
+								<span id="IDchkDesc"> ※ 아이디 중복체크 </span>
+								<input id="IDchkBtn" type="button" name="IDchkBtn" value="중복체크" onclick="IDchkBtns();"/>		
+							</li>
+							<li>
+								<label for="userpass"> Password </label>
+								<input id="userpass" type="password" name="userpass" maxlength="20" autocomplete="off" placeholder="Enter Password" required/>
+							</li>
+							<li>
+								<label for="userpasschk">Reenter Password</label>
+								<input id="userpasschk" type="password" name="userpasschk" maxlength="20" autocomplete="off" placeholder="Reenter Password" required/>
+							</li>
+							<li>
+								<label for="firstname"> First Name </label>
+								<input id="firstname" type="text" name="firstname" placeholder="Enter Firstname" required/>
+							</li>
+							<li>
+								<label for="surname">Surname</label>
+								<input id="surname" type="text" name="surname" maxlength="20" placeholder="Enter Surname" required/>
+							</li>
+							<li>
+								<label for="useremail"> E-mail </label>
+								<input id="useremail" type="email" name="useremail" placeholder="Example@barcelona.com" required/>
+							</li>
+							<li>
+								<label for="userphone"> Telephone </label>
+								<input id="userphone" type="tel" name="userphone" pattern="\d{3}-\d{3,4}-\d{4}" placeholder="010-123-4567" required/>
+							</li>
+							<li id="postArea">
+								<label for="post1">Post Code: </label>
+								<input id="post1" type="text" name="post1" title="새로운 우편번호" placeholder="새로운 우편번호"/>
+								<input id="postBtn" type="button" value="우편번호 찾기" onclick="postcode();"/>
+							</li>
+							<li>
+								<label for="add1">Address: </label>
+								<input id="add1" type="text" name="add1" title="상세주소1" placeholder="도로명"/>
+							</li>
+							<li class="addArea">
+								<input id="add2" type="text" name="add2" title="상세주소2" placeholder="상세주소"/>
+							</li>
+							<li class="checkboxs">
+								<input id="accept0" type="checkbox" name="accept0" required/>
+								<label for="accept0">
+									 I have read and accept the <a href="#none" title="terms">Privacy Policy</a> and the <a href="#none" title="notice">Legal Advice</a>
+								</label>
+							</li>
+							<li class="checkboxs">
+								<input id="accept1" type="checkbox" name="accept1" required/>
+								<label for="accept1">
+									I do wish to receive promotional and commercial communications from FC BARCELONA
+								</label>
+							</li>
+							<li class="checkboxs">
+								<input id="accept2" type="checkbox" name="accept2" required/>
+								<label for="accept2">
+									I do not accept the disclosure of my data to FC BARCELONA's sponsors or collaborators for the purposes detailed above
+								</label>
+							</li>
+							<li>
+								<div id="btnCenter">
+									<input type="submit" value="Sign Up" title="가입"/>
+									<input type="reset" value="Reset" title="다시쓰기"/>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</section>
+		</div>
+		<footer id="footer">
+			<div id="copy">
+				<h2>카피라이터 영역</h2>
+				<span>&copy; <span class="copy">Copyright</span> <a href="index.html" title="Barcelona main">FC Barcelona</a> | Pàgina Oficial del FC Barcelona</span>
+			</div>
+			<section id="sponser">
+				<h2>스폰서 영역</h2>
+				<ul>
+					<li><a href="#" title="스폰서0"><img src="img/spon0_on.png" alt="스폰서0 로고"/></a></li>	
+					<li><a href="#" title="스폰서1"><img src="img/spon1_on.png" alt="스폰서1 로고"/></a></li>
+					<li><a href="#" title="스폰서3"><img src="img/spon3_on.png" alt="스폰서3 로고"/></a></li>
+					<li><a href="#" title="스폰서8"><img src="img/spon8_on.png" alt="스폰서8 로고"/></a></li>
+					<li><a href="#" title="스폰서2"><img src="img/spon2_on.png" alt="스폰서2 로고"/></a></li>	
+					<li><a href="#" title="스폰서4"><img src="img/spon4_on.png" alt="스폰서4 로고"/></a></li>
+					<li><a href="#" title="스폰서5"><img src="img/spon5_on.png" alt="스폰서5 로고"/></a></li>
+					<li><a href="#" title="스폰서6"><img src="img/spon6_on.png" alt="스폰서6 로고"/></a></li>
+					<li><a href="#" title="스폰서7"><img src="img/spon7_on.png" alt="스폰서7 로고"/></a></li>
+				</ul>
+			</section>
+		</footer>
+	</div>  
+ </body>
+</html>
